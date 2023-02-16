@@ -3,12 +3,12 @@ int main(void)
 {
     int i;
 
-    struct month
+    struct Mois
     {
-        int numberOfDays;
-        char name[3];
+        int nbjours;
+        char nom[3];
     };
-    struct month months[12] = {
+    struct Mois mois[12] = {
         {31, {'J', 'A', 'N'}},
         {28, {'F', 'E', 'B'}},
         {31, {'M', 'A', 'R'}},
@@ -23,13 +23,13 @@ int main(void)
         {31, {'D', 'E', 'C'}},
     };
 
-    printf(" Month     Number of Days\n ");
+    printf(" mois     Nombre de jours\n ");
     printf("-----     --------------\n ");
     for (i = 0; i < 12; ++i)
         printf(" %c%c%c           % i\n ",
-               months[i].name[0],
-               months[i].name[1],
-               months[i].name[2],
-               months[i].numberOfDays);
+               mois[i].nom[0],
+               mois[i].nom[1],
+               mois[i].nom[2],
+               mois[i].nbjours);
     return 0;
 }
